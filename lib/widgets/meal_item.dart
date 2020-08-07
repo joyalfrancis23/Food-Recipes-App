@@ -56,10 +56,7 @@ class MealItem extends StatelessWidget {
       MealsDetailsScreen.routeName,
       arguments: id,
       
-    ).then((value) {
-      if(value!=null){
-     // removeItem(value);
-    }});
+    );
   }
   @override
   
@@ -79,7 +76,7 @@ class MealItem extends StatelessWidget {
                   topLeft: Radius.circular(15),
                   topRight: Radius.circular(15),
                 ) ,
-                child: Image.network(imageURL),
+                child: Image.network(imageURL,fit: BoxFit.cover,),
                 
                 ),
               Positioned(

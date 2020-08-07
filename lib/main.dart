@@ -53,7 +53,7 @@ class _MyAppState extends State<MyApp> {
 
  void _toggleFavorite(String mealId){
    final exsistingIndex = _favoritesMeals.indexWhere((element) => element.id==mealId);
-   if (exsistingIndex>=0){
+   if (exsistingIndex  >=  0){
      setState(() {
        _favoritesMeals.removeAt(exsistingIndex);
      });
@@ -99,7 +99,7 @@ class _MyAppState extends State<MyApp> {
         CategoryMealsScreen.routeName: (ctx) =>
             CategoryMealsScreen(_availableMeals),
         MealsDetailsScreen.routeName: (ctx) => MealsDetailsScreen(_toggleFavorite,isMealFavorite),
-        FiltersScreen.routeName: (ctx) => FiltersScreen( _setFilters,_filters,),
+        FiltersScreen.routeName: (ctx) => FiltersScreen( _filters,_setFilters,),
       },
       
       
